@@ -1,4 +1,4 @@
-#include lists.h
+#include "lists.h"
 
 /**
 * check_cycle - Will look for cilces in linked lists
@@ -8,17 +8,17 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *fast_gel;
-	listint_t *slow_motion;
+	listint_t *slow = list;
+	listint_t *fast = list;
 
-	fast_gel = list;
-	slow_motion = list;
+	if (!list)
+		return (0);
 
-	while (fast_gel && slow_motion && slow_motion->next)
+	while (slow && fast && fast->next)
 	{
-		fast_gel = fast_gel->next;
-		slow_motion = slow_motion->next->next;
-		if (fast_gel == slow_motion)
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
 			return (1);
 	}
 	return (0);
