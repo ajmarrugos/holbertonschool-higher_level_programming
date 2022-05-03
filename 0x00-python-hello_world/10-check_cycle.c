@@ -8,12 +8,18 @@
 
 int check_cycle(listint_t *list)
 {
-	if (cicle)
+	listint_t *fast_gel;
+	listint_t *slow_motion;
+
+	fast_gel = list;
+	slow_motion = list;
+
+	while (fast_gel && slow_motion && slow_motion->next)
 	{
-		return (1);
+		fast_gel = fast_gel->next;
+		slow_motion = slow_motion->next->next;
+		if (fast_gel == slow_motion)
+			return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
