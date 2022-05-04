@@ -2,7 +2,6 @@
 
 ### Files and functions
 
-| ------------------------- | ------------------------------------------------------------------------- |
 | 0-positive_or_negative.py | Tells you the political statement of a number (if positive or negative)   |
 | 1-last_digit.py           | Shows you the tail of a number                                            |
 | 2-print_alphabet.py       | Will process from ASCII range values to print the alphabet in lowercase   |
@@ -17,7 +16,6 @@
 | 11-pow.py                 | Computes a to the power of b and return the value                         |
 | 12-fizzbuzz.py            | Will print the numbers from 1 to 100 separated by a space                 |
 | 13-insert_number.c        | This inserts a number into a sorted singly linked list                    |
-| ------------------------- | ------------------------------------------------------------------------- |
 
 ### Header file
 
