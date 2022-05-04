@@ -2,6 +2,8 @@
 
 ### Files and functions
 
+| Files                     | Use / Description                                                         |
+| ------------------------- | ------------------------------------------------------------------------- |
 | 0-positive_or_negative.py | Tells you the political statement of a number (if positive or negative)   |
 | 1-last_digit.py           | Shows you the tail of a number                                            |
 | 2-print_alphabet.py       | Will process from ASCII range values to print the alphabet in lowercase   |
