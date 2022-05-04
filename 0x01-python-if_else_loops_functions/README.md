@@ -18,7 +18,4 @@
 | 11-pow.py                 | Computes a to the power of b and return the value                         |
 | 12-fizzbuzz.py            | Will print the numbers from 1 to 100 separated by a space                 |
 | 13-insert_number.c        | This inserts a number into a sorted singly linked list                    |
-
-### Header file
-
-| lists.h                   | Contains the function prototype and the list structure for the task       |
+| lists.h                   | Header file that Contains function prototype and the list structure       |
