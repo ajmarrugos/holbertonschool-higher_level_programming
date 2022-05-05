@@ -7,4 +7,3 @@ if __name__ == '__main__':
     print((a), '-', (b), '= ', f'{sub(a, b)}')
     print((a), '*', (b), '= ', f'{mul(a, b)}')
     print((a), '/', (b), '= ', f'{div(a, b)}')
-    
