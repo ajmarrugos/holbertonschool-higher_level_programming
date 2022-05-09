@@ -11,4 +11,5 @@ Each of the data structures is unique in its own way. Data structures are “con
 | File/Function             | Use/Description                   |
 | ------------------------- | --------------------------------- |
 | 0-print_list_integer.py   | Will print all integers of a list |
-| 1-element_at.py           |                                   |
+| 1-element_at.py           | Retrieves an element from a list  |
+| 2-replace_in_list.py      |                                   |
