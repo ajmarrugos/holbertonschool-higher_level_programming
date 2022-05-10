@@ -4,11 +4,11 @@
 
 | File/Function                     | Use/Description                                                   |
 | --------------------------------- | ----------------------------------------------------------------- |
-| 0-square_matrix_simple.py         | |
-| 1-search_replace.py               | |
-| 2-uniq_add.py                     | |
-| 3-common_elements.py              | |
-| 4-only_diff_elements.py           | |
+| 0-square_matrix_simple.py         | Squares the data of a matrix                                      |
+| 1-search_replace.py               | Seeks & replaces same elements between 2 lists                    | 
+| 2-uniq_add.py                     | Adds unique elements between 2 lists                              |
+| 3-common_elements.py              | Returns common elements between 2 sets                            |
+| 4-only_diff_elements.py           | Return the different elements between 2 sets                      |
 | 5-number_keys.py                  | |
 | 6-print_sorted_dictionary.py      | |
 | 7-update_dictionary.py            | |
