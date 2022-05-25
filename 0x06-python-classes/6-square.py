@@ -15,19 +15,12 @@ Public instance method: def my_print(self).
 class Square:
     """Represents an empty square"""
     def __init__(self, size=0, position=(0, 0)):
-        """ inizialize Square class """
-        if type(size) != int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        self._Square__size = size
-
-        if type(position) != tuple or \
-           not all(type(x) == int for x in position) or \
-           not all(x >= 0 for x in position) or \
-           len(position) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self._Square__position = position
+        """
+        Init class with args: size
+        runs a check to ensure size data is correct type and value.
+        """
+        self.size = size
+        self.position = position
 
     def area(self):
         """Method function to return the 'area' of the Square"""
@@ -56,9 +49,9 @@ class Square:
     @position.setter
     def position(self, value):
         """Sets the position to a value."""
-        if not isinstance(value, tuple) or len(value) != 2:
+        if type(value) != tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[0], int) or not isinstance(value[1], int):
+        if type(value[0]) != int or type(value[1]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
         if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -66,9 +59,14 @@ class Square:
 
     def my_print(self):
         """Method that draws a square with '#' to the Stdout"""
-        [print() for x in range(self.position[1])]
-        print("\n".join(["".join(([" "] * self.position[0]) +
-                                 ["#" for x in range(self.size)])
-                         for y in range(self.size)]))
-
-
+        if self.__size > 0:
+            for x in range(self.__position[1]):
+                print()
+            for x in range(self.__size):
+                for y in range(self.__position[0]):
+                    print(" ", end="")
+                for y in range(self.__size):
+                    print("#", end="")
+                print()
+        else:
+            print()
