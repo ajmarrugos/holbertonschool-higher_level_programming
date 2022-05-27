@@ -1,0 +1,21 @@
+===============================
+Test for 0-add_integer.py
+===============================
+
+Evaluation ``add_integer``
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test Cases:
+
+1. Basic usage:
+    >>> add_integer(1, 2)
+    3
+
+2. Negative input:
+    >>> add_integer(100, -2)
+    98
+
+3. One input:
+    >>> add_integer(2)
+    100
