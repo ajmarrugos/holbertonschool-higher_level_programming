@@ -19,3 +19,23 @@ Test Cases:
 3. One input:
     >>> add_integer(2)
     100
+
+4. None input:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+5. Float and negative input:
+    >>> add_integer(100.3, -2)
+    98
+
+6. Float overflow:
+    >>> add_integer(1500.5)
+    1598
+
+7. Float NaN:
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
