@@ -2,9 +2,9 @@
 
 ### Doctest
 
-Creating basic example functions to test in python with Doctest
-A given .txt file will serve as input to give test cases
-The docstrings will give inputs in the comments to try as test cases
+- Creating basic example functions to test in python with Doctest
+- A given .txt file will serve as input to give test cases
+- The docstrings will give inputs in the comments to try as test cases
 
 Use:
 
