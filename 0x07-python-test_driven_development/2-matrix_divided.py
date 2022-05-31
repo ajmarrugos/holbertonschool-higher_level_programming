@@ -1,33 +1,44 @@
 #!/usr/bin/python3
 """
-matrix_divided:
-    - Declare and define variable strings to short the syntax
-    - Divides each element of a matrix of numbers by a number
-    - Checks if the entire list is int/float
-""" 
-
-    not_matrix = "matrix must be a matrix (list of lists) of integers/floats"
-    err_size = "Each row of the matrix must have the same size"
+Module: 0-add_integer.py
+Doctest: 0-add_integer.txt
+"""
 
 
 def matrix_divided(matrix, div):
+    """ Recives a 2D matrix and a division number """
 
-    if not isinstance(matrix, list):
-        raise TypeError(not_matrix)
-    if len(matrix) == 0:
-        raise TypeError(not_matrix)
+    """ Declares error messages as string variables to short syntax """
+    div_zero = "division by zero"
+    div_numb = "div must be a number"
+    wrg_size = "Each row of the matrix must have the same size"
+    not_mtrx = "matrix must be a matrix (list of lists) of integers/floats"
 
-    new_matrix = []
-    
-    if isinstance(matrix[0], bool):
-        raise TypeError(not_matrix)
-    try:
-        len_fst_row = len(matrix[0])
-    except Exception:
-        raise TypeError(not_matrix)
+    """ Declares a new matrix as an array """
+    new_mtrx = []
 
-    for list_x in matrix:
-    
-        new_matrix.append(list(map(lambda n: round(n/div, 2), list_x)))
+    """ Checks if "div" is 0 """
+    if div == 0:
+        raise ZeroDivisionError(div_zero)
 
-    return new_matrix
+    """ Checks if "div" is an int or float """
+    if not isinstance(div, (int, float)):
+        raise TypeError(div_numb)
+
+    """ Checks if each list in the matrix are the same size """
+    for lists in matrix:
+        if len(lists) != len(matrix[0]):
+            raise TypeError(wrg_size)
+            inner_list = []
+    """ Checks if the entire matrix is made of ints/floats """
+    for items in lists:
+        if not isinstance(items, (int, float)):
+            raise TypeError(not_matrix)
+
+        else:
+            """ Divides the items of the matrix of numbers by a number """
+            inner_list.append(round(items / div, 2))
+
+    new_mtrx.append(inner_list)
+
+    return new_mtrx
