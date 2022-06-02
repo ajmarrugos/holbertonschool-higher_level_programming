@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Module: 0-add_integer.py
-Doctest: 0-add_integer.txt
+Module: 2-matrix_divided.py
+Doctest: 2-matrix_divided.txt
 """
 
 
@@ -34,7 +34,6 @@ def matrix_divided(matrix, div):
     for items in lists:
         if not isinstance(items, (int, float)):
             raise TypeError(not_matrix)
-
         else:
             """ Divides the items of the matrix of numbers by a number """
             inner_list.append(round(items / div, 2))
