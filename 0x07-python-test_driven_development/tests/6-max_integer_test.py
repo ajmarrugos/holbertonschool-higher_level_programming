@@ -47,3 +47,7 @@ class TestMaxInteger(unittest.TestCase):
         '''test result of pass tuple'''
         test = (41, 60)
         self.assertEqual(max_integer(test), 60)
+
+
+if __name__ == "__main__":
+    unittest.main()
