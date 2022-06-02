@@ -1,0 +1,31 @@
+===========================
+Test for 5-text_indentation.py
+===========================
+
+Evaluation ``text_indentation``
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test Cases:
+
+1.  Basic Usage
+    >>> text_indentation("Alberto Marrugo")
+    Alberto Marrugo
+
+2.  Dot in the input
+    >>> text_indentation("Alberto.Marrugo")
+    Alberto.
+    <BLANKLINE>
+    Marrugo
+
+3.  Int input
+    >>> text_indentation(8)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+4.  No input
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
