@@ -27,3 +27,23 @@ class TestMaxInteger(unittest.TestCase):
         ''' test result of positive int in list in mid '''
         test = [3, 2, 6, 4, 5]
         self.assertEqual(max_integer(test), 6)
+
+    def test_positive_int_end(self):
+        '''test result of positive int in list at end'''
+        test = [16, 22, 35, 41, 60]
+        self.assertEqual(max_integer(test), 60)
+
+    def test_mixed_int(self):
+        '''test result of mixed int in list'''
+        test = [16, 22, -35, 41, -60]
+        self.assertEqual(max_integer(test), 41)
+
+    def test_negative_ints(self):
+        '''test result of negative int in list'''
+        test = [-16, -1, -35, -41, -60]
+        self.assertEqual(max_integer(test), -1)
+
+    def test_tuple_pass(self):
+        '''test result of pass tuple'''
+        test = (41, 60)
+        self.assertEqual(max_integer(test), 60)
