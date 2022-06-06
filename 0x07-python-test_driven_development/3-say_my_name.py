@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 """
+Module: 3-say_my_name.py
+Doctest: 3-say_my_name.txt
+"""
+"""
 say_my_name:
     - Prints "My name is <first name> <last name>"
     - Checks if first_name is a string
