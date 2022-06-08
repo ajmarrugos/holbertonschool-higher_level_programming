@@ -5,11 +5,8 @@ Module: 6-base_geometry.py
 
 
 class BaseGeometry:
-    """
-    Class for BaseGeometry
-    """
+    """ Class for BaseGeometry """
+
     def area(self):
-        """
-        Causes exception when called
-        """
+        """ Causes exception when called """
         raise Exception("area() is not implemented")
