@@ -4,19 +4,15 @@ Module: 100-my_int.py
 """
 
 
-Rectangle = __import__('9-rectangle').Rectangle
+class MyInt(int):
+    """ Class inheriting from int, with reverse behavior """
 
+    def __eq__(self, other):
+        """ Equality becomes inequality """
 
-class Square(Rectangle):
-    """"Square class """
+        return super().__ne__(other)
 
-    def __init__(self, size):
-        self.integer_validator("size", size)
-        super().__init__(size, size)
-        self.__size = size
+    def __ne__(self, other):
+        """ Inequality becomes equality """
 
-    def area(self):
-        return self.__size * self.__size
-
-    def __str__(self):
-        return f"[Square] {self.__size}/{self.__size}"
+        return super().__eq__(other)
