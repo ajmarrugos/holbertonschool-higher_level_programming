@@ -6,42 +6,44 @@ Evaluation ``BaseGeometry``
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-1.  
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("my_int", 12)
-    >>> bg.integer_validator("width", 89)
+1.  Check for Documentation:
+    >>> mod_doc = __import__("7-base_geometry").__doc__
+    >>> len(mod_doc) > 1
+    True
 
 2.  
-    >>> try:
-    ...     bg.integer_validator("name", "John")
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] name must be an integer
+    >>> class_doc = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(class_doc) > 1
+    True
 
-3.  
-    >>> try:
-    ...     bg.integer_validator("age", 0)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [ValueError] age must be greater than 0
+3.  Now completing function tests:
+    >>> bg = BaseGeometry()
 
-4.  
-    >>> try:
-    ...     bg.integer_validator("distance", -4)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [ValueError] distance must be greater than 0
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
 
-5.  
-    >>> try:
-    ...     bg.integer_validator("distance", 1.0)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] distance must be an integer
+    >>> bg.integer_validator("my_int", 12)
 
-6.  
-    >>> try:
-    ...     bg.integer_validator("name", 1, 2, 3)
-    ... except Exception as e:
-    ...     print(e)
-    integer_validator() takes 3 positional arguments but 5 were given
+    >>> bg.integer_validator("width", 89)
+
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+
+    >>> bg.integer_validator("distance", -4)
+    Traceback (most recent call last):
+    ...
+    ValueError: distance must be greater than 0
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
