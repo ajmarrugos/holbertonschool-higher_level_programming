@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """
-6. Improve Geometry
+7-base_geometry.py
 """
 
 
 class BaseGeometry():
-    """
-    Write a class BaseGeometry (based on 6-base_geometry.py).
-    """
+    """ Class for BaseGeometry """
 
     def area(self):
+        """ Causes exception when called """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
+        """ Validates value """
         if isinstance(value, bool):
             raise TypeError("{} must be an integer".format(name))
         if not isinstance(value, int):
