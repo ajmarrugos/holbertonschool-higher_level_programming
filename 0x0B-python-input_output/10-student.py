@@ -16,11 +16,7 @@ class Student:
         """ Will return a dictionary representation of a
         Student instance with specified attributes """
         if attrs is None:
-            return self.__dict__
-        new_dic = {}
-        for a in attrs:
-            try:
-                new_dic[a] = self.__dict__[a]
-            except
-            pass
-        return new_dic
+            return(self.__dict__)
+
+        return({item: self.__dict__[item] for item
+                in attrs if item in self.__dict__})
