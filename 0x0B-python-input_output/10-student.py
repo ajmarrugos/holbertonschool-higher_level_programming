@@ -21,5 +21,6 @@ class Student:
         for a in attrs:
             try:
                 new_dic[a] = self.__dict__[a]
-                pass
+            except
+            pass
         return new_dic
