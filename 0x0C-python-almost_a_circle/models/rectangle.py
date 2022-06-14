@@ -74,10 +74,12 @@ class Rectangle(Base):
         self.int_val("y", value)
         self.__y = value
 
+    """CALCULATION METHODS"""
     def area(self):
         """Returns the area of rectangle"""
         return self.__width * self.__height
 
+    """REPRESENTATION METHODS"""
     def display(self):
         """Prints a rectangle to stdout"""
         for offset_y in range(self.y):
@@ -94,3 +96,21 @@ class Rectangle(Base):
 
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    """CLASS ATTRIBUTES UPDATER"""
+    def update(self, *args, **kwargs):
+        """Updates rectangle values"""
+        if len(kwargs) != 0:
+            for keys, vals in kwargs.items():
+                setattr(self, keys, vals)
+        elif len(args) != 0:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
+        else:
+            print()
