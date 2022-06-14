@@ -8,7 +8,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Returns the width attributes"""
+    """Initializes a Rectangle instance"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -114,3 +114,10 @@ class Rectangle(Base):
                 pass
         else:
             print()
+
+    """DATA STRUCTURE METHODS"""
+    def to_dictionary(self):
+        """Returns the dictionary"""
+
+        return {'x': self.__x, 'y': self.__y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
