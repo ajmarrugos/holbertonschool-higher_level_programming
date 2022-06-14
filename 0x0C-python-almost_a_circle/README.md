@@ -10,12 +10,14 @@ Classes will have the following Private instance Attributes:
 - "x" and "y" (position values)
 
 Features implemented for the child classes:
+
 - Heritances
 - Getter and Setter methods
-- Data validation method for Setters
-- Area calculation method for Rectangle class
-- Display method to build a symbolic representation of the rectangle
+- A data validation method for setters
+- An area calculation method for the Rectangle class
+- A display method to build a symbolic representation of the rectangle
 - A Protected str method to retrieve data from the rectangle formatted as str
+- A method to update data for rectangle attributes (this also can recieve and understand “key-worded arguments”)
 
 ### Models
 
