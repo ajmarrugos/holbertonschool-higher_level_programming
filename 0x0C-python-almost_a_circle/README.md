@@ -1,16 +1,19 @@
 ## Python: Almost A Circle
 
-A project that helps us to review different kinds of data, class structures that will have built-in features as:
+A project that helps us to review different kinds of data and class structures.
+This exercies could be interpreted as the base of a Relational Data Model.
 
-- ID
-- Size values: "Height" and "Weight"
-- Position values: 'x' and 'y'
-- Sizes
+Classes will have the following Private instance Attributes:
 
-For this we will implement:
-- Object classes with heritances
-- List of objects
-- Directories
+- "id" (for indexing)
+- "width" and "height" (size values)
+- "x" and "y" (position values)
+
+Features implemented for this classes:
+- Heritances
+- Getter and Setter methods
+- Data validation method for Setters
+- Area calculation method for Rectangle class
 
 ### Models
 
