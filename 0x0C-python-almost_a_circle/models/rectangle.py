@@ -16,7 +16,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    """ATTRIBUTE GETTERS""""
+    """ATTRIBUTE GETTERS"""
     @property
     def width(self):
         """Returns the width attribute"""
@@ -37,27 +37,23 @@ class Rectangle(Base):
         """Returns the y attribute"""
         return self.__y
 
-    """ATTRIBUTE SETTERS""""
+    """ATTRIBUTE SETTERS"""
     @width.setter
     def width(self, value):
         """Sets the width attributes."""
-        self.int_val("width", value)
         self.__width = value
 
     @height.setter
     def height(self, value):
         """Sets the height attributes."""
-        self.int_val("height", value)
         self.__height = value
 
     @x.setter
     def x(self, value):
         """Sets the x attributes."""
-        self.int_val("x", value)
         self.__x = value
 
     @y.setter
     def y(self, value):
         """Sets the y attributes."""
-        self.int_val("y", value)
         self.__y = value
