@@ -122,7 +122,7 @@ class Rectangle(Base):
     """DATA STRUCTURE METHODS"""
 
     def to_dictionary(self):
-        """Returns the dictionary"""
+        """Returns a dictionary from attribute data"""
 
         return {'x': self.__x, 'y': self.__y, 'id': self.id,
                 'height': self.__height, 'width': self.__width}
