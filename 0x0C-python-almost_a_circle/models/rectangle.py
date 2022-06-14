@@ -110,8 +110,4 @@ class Rectangle(Base):
             except IndexError:
                 pass
         else:
-<<<<<<< HEAD
             print()
-=======
-            print()
->>>>>>> refs/remotes/origin/master
