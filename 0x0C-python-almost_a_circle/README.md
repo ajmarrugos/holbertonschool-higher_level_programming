@@ -9,11 +9,13 @@ Classes will have the following Private instance Attributes:
 - "width" and "height" (size values)
 - "x" and "y" (position values)
 
-Features implemented for this classes:
+Features implemented for the child classes:
 - Heritances
 - Getter and Setter methods
 - Data validation method for Setters
 - Area calculation method for Rectangle class
+- Display method to build a symbolic representation of the rectangle
+- A Protected str method to retrieve data from the rectangle formatted as str
 
 ### Models
 
