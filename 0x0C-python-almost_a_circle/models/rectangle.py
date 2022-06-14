@@ -74,10 +74,12 @@ class Rectangle(Base):
         self.int_val("y", value)
         self.__y = value
 
+    """CALCULATION METHODS"""
     def area(self):
         """Returns the area of rectangle"""
         return self.__width * self.__height
 
+    """REPRESENTATION METHODS"""
     def display(self):
         """Prints a rectangle to stdout"""
         for offset_y in range(self.y):
@@ -108,4 +110,8 @@ class Rectangle(Base):
             except IndexError:
                 pass
         else:
+<<<<<<< HEAD
             print()
+=======
+            print()
+>>>>>>> refs/remotes/origin/master
