@@ -21,8 +21,8 @@ Features implemented for the child classes:
 
 ### Models
 
-| File/Models       | Description                                                               | Features  |
-| ----------------- | ------------------------------------------------------------------------- | --------- |
-| base.py           | A base class/object                                                       |           |
-| rectangle.py      | A child class/object which inherits features from "base"                  |           |
-| square.py         | A child class/object which inherits features from "base" and "rectangle"  |           |
+| File/Models       | Description                                                               |
+| ----------------- | ------------------------------------------------------------------------- |
+| base.py           | A base class/object                                                       |
+| rectangle.py      | A child class/object which inherits features from "base"                  |
+| square.py         | A child class/object which inherits features from "base" and "rectangle"  |
