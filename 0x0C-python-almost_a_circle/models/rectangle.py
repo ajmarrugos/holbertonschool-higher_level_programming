@@ -9,6 +9,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Initializes a Rectangle instance"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -38,6 +39,7 @@ class Rectangle(Base):
         return self.__y
 
     """ATTRIBUTE VALIDATION METHOD"""
+
     def int_val(self, atts, value):
         """Validates entry data in attributes"""
         if type(value) is not int:
@@ -75,11 +77,13 @@ class Rectangle(Base):
         self.__y = value
 
     """CALCULATION METHODS"""
+
     def area(self):
         """Returns the area of rectangle"""
         return self.__width * self.__height
 
     """REPRESENTATION METHODS"""
+
     def display(self):
         """Prints a rectangle to stdout"""
         for offset_y in range(self.y):
@@ -93,11 +97,11 @@ class Rectangle(Base):
 
     def __str__(self):
         """Returns a string representation of a Rectangle"""
-
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     """CLASS ATTRIBUTES UPDATER"""
+
     def update(self, *args, **kwargs):
         """Updates rectangle values"""
         if len(kwargs) != 0:
@@ -116,6 +120,7 @@ class Rectangle(Base):
             print()
 
     """DATA STRUCTURE METHODS"""
+
     def to_dictionary(self):
         """Returns the dictionary"""
 
