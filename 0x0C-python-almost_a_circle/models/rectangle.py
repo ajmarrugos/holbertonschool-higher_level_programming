@@ -73,3 +73,7 @@ class Rectangle(Base):
         """Sets the y attribute"""
         self.int_val("y", value)
         self.__y = value
+
+    def area(self):
+        """Returns the area of rectangle"""
+        return self.__width * self.__height
