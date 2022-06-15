@@ -5,7 +5,7 @@ Unittest: tests/test_base.py
 """
 
 import json
-
+import csv
 
 class Base:
     """Base class"""
@@ -70,5 +70,29 @@ class Base:
                 for item in dicts:
                     list_inst.append(cls.create(**item))
                 return list_inst
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Saves a JSON string to file"""
+        filename = cls.__name__ + ".csv"
+        if list_objs is not None:
+            list_objs = [i.to_dictionary() for i in list_objs]
+        with open(filename, "w") as f:
+            f.write(cls.to_json_string(list_objs))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Load from a CSV file """
+        lists = []
+        try:
+            with open("{}.csv".format(cls.__name__),
+                      "r", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                items = list(reader)
+            for item in items:
+                lists.append(cls.create(**item))
+            return lists
         except FileNotFoundError:
             return []
