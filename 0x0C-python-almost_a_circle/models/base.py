@@ -47,3 +47,14 @@ class Base:
             return dict
         dict = json.loads(json_string)
         return dict
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance from a temp scratch"""
+        if cls.__name__ == "Rectangle":
+            temp = cls(1, 1)
+        if cls.__name__ == "Square":
+            temp = cls(1)
+
+        temp.update(**dictionary)
+        return temp
