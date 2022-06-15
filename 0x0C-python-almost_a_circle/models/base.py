@@ -31,15 +31,10 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """Will save JSON strinf of a list of objects to a file"""
-        dict = []
-
-        createfile = cls.__name__ + ".json"
-        if list_objs is None:
-            with open(createfile, 'w', encoding='utf-8') as f:
-                f.write(cls.to_json_string(list_objs))
-
-        for element in list_objs:
-            dict.append(element.to_dictionary())
-
-        with open(createfile, 'w', encoding='utf-8') as f:
-            f.write(cls.to_json_string(dict))
+        if list_objs is None or list_objs == []:
+            dict = "[]"
+        else:
+            dict = cls.to_json_string([o.to_dictionary() for o in list_objs])
+        filename = cls.__name__ + ".json"
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(dict)
