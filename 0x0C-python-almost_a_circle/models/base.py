@@ -5,7 +5,8 @@ Unittest: tests/test_base.py
 """
 
 import json
-import csv
+from os import path
+
 
 class Base:
     """Base class"""
@@ -85,14 +86,14 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """Load from a CSV file """
-        lists = []
-        try:
-            with open("{}.csv".format(cls.__name__),
-                      "r", encoding="utf-8") as f:
-                reader = csv.DictReader(f)
-                items = list(reader)
-            for item in items:
-                lists.append(cls.create(**item))
-            return lists
-        except FileNotFoundError:
+        if path.exists(cls.__name__ + ".csv") is False:
             return []
+        with open(cls.__name__ + ".csv", "r",  encoding='utf-8') as file:
+            list_inst = []
+            obj_tlist = cls.from_json_string(file.read())
+            for dict in obj_tlist:
+                obj_dict = {}
+                for key, value in dict.items():
+                    obj_dict[key] = value
+                list_inst.append(cls.create(**obj_dict))
+            return list_inst
