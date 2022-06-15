@@ -32,9 +32,18 @@ class Base:
     def save_to_file(cls, list_objs):
         """Will save JSON strinf of a list of objects to a file"""
         if list_objs is None or list_objs == []:
-            dict = "[]"
+            tofile = "[]"
         else:
-            dict = cls.to_json_string([o.to_dictionary() for o in list_objs])
+            tofile = cls.to_json_string([o.to_dictionary() for o in list_objs])
         filename = cls.__name__ + ".json"
         with open(filename, 'w', encoding='utf-8') as f:
-            f.write(dict)
+            f.write(tofile)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Will convert JSON string into a dictionary"""
+        dict = []
+        if json_string is None or json_string == "":
+            return dict
+        dict = json.loads(json_string)
+        return dict
