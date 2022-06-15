@@ -58,3 +58,17 @@ class Base:
 
         temp.update(**dictionary)
         return temp
+
+    @classmethod
+    def load_from_file(cls):
+        """Load a list of instances from a JSON file"""
+        list_inst = []
+        with open(cls.__name__ + ".json", mode="r") as read_file:
+            text = read_file.read()
+        text = cls.from_json_string(text)
+        for item in text:
+            if type(item) == dict:
+                list_inst.append(cls.create(**item))
+            else:
+                list_inst.append(item)
+        return list_inst
