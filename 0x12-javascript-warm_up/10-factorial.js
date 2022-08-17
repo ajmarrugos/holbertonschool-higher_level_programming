@@ -7,4 +7,3 @@ function factorialize (num) {
   }
   const x = parseInt(process.argv[2]);
   console.log(factorialize(x));
-  
