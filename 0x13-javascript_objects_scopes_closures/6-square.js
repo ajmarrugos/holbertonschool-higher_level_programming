@@ -1,12 +1,19 @@
 #!/usr/bin/node
 const Square1 = require('./4-rectangle');
 
-class Square extends Square1 {
-  charPrint (c = 'X') {
-    for (let s = 0; s < this.width; s++) {
-      console.log(c.repeat(this.width));
+class Square extends Rectangle {
+    constructor (size) {
+      super(size, size);
+    }
+  
+    charPrint (c) {
+      if (c) {
+        for (let i = 0; i < this.height; i++) {
+          console.log(c.repeat(this.width));
+        }
+      } else {
+        this.print();
+      }
     }
   }
-}
-
-module.exports = Square;
+  module.exports = Square;
